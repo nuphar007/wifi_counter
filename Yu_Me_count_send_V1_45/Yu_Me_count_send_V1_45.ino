@@ -37,7 +37,7 @@ String password = "86868686";
 #define AIO_SERVERPORT  1883 // MQTT port
 
 // Unique Device ID - now loaded from NVS
-String deviceID = "bb2"; // Default device ID
+String deviceID = "spare"; // Default device ID
 
 // Create MQTT client with PubSubClient
 WiFiClient wifiClient;
@@ -383,7 +383,7 @@ void setup() {
   preferences.begin(nvsNamespace, false);
   
   // Load device ID and WiFi credentials from NVS
-  deviceID = preferences.getString("deviceID", "bb2");
+  deviceID = preferences.getString("deviceID", "spare");
   ssid = preferences.getString("ssid", "Yu.me Wifi");
   password = preferences.getString("password", "86868686");
   
